@@ -4,10 +4,10 @@ from watson_developer_cloud.natural_language_understanding_v1 import Features, E
 from cloudant.client import CouchDB
 
 natural_language_understanding = NaturalLanguageUnderstandingV1(
-  iam_apikey='1_qpmrC8FREYYCWwFn86o4b7QarYcK2WNNpy-4jXyJMX',
+  iam_apikey='{api_key}}',
   version='2018-09-21')
 
-client = CouchDB("078045c6-f1ff-4330-a41d-cf164b21b36b-bluemix", "32359518922b9344bb89ae153226841fa15b218c639d185652c34011f867fe75", url='https://078045c6-f1ff-4330-a41d-cf164b21b36b-bluemix:32359518922b9344bb89ae153226841fa15b218c639d185652c34011f867fe75@078045c6-f1ff-4330-a41d-cf164b21b36b-bluemix.cloudantnosqldb.appdomain.cloud:443', connect=True)
+client = CouchDB("{user}", "{pass}", url='{url_connection}', connect=True)
 session = client.session()
 print('Username: {0}'.format(session['userCtx']['name']))
 print('Databases: {0}'.format(client.all_dbs()))
